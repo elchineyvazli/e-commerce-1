@@ -1,0 +1,46 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "elchineyvazli",
+            "fullname": "Elchin Eyvazli",
+            "email": "elchineyvazli51@gmail.com",
+            "number": "+994556902296",
+            "password": "elchin123",
+            "desc": "elchin eyvazli elchin eyvazli elchin eyvazli elchin eyvazli elchin eyvazli elchin eyvazli elchin eyvazli elchin eyvazli",
+            "gender": "elchineyvazli",
+            "age": "elchineyvazli",
+            "rememberMe": true,
+            "obj": {
+                "arr": []
+            }
+        }
+    ],
+    "products": [
+        {
+            "type": "shoes",
+            "littlePics": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "prevPrice": 25,
+            "currentPrice": 7.93,
+            "aboutProduct": [
+                "s",
+                "s",
+                "s",
+                "s"
+            ],
+            "sizes": [
+                36,
+                37,
+                38,
+                39,
+                40
+            ],
+            "id": "c061"
+        }
+    ]
+}

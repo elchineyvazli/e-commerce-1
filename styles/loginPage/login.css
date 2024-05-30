@@ -1,0 +1,404 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+::-moz-selection {
+  background-color: #3B945E;
+  color: white;
+}
+
+::selection {
+  background-color: #3B945E;
+  color: white;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+input {
+  background-color: transparent;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.required {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 150px;
+}
+body #formContainer {
+  width: 90%;
+  height: 540px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 2px;
+  display: flex;
+}
+body #formContainer form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 50px 50px;
+}
+body #formContainer form #logoContainer {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 80px;
+  display: flex;
+  position: relative;
+  left: 10px;
+}
+body #formContainer form #logoContainer #logo1,
+body #formContainer form #logoContainer #logo2 {
+  font-size: 60px;
+  animation: flicker 1.5s infinite alternate;
+  position: absolute;
+  color: #3B945E;
+  font-weight: 500;
+}
+body #formContainer form #logoContainer #logo1 {
+  transform: rotate(-225deg);
+}
+body #formContainer form #logoContainer #logo2 {
+  transform: rotate(45deg);
+  right: -34px;
+}
+body #formContainer form #loginSide {
+  width: 70%;
+  display: none;
+  flex-direction: column;
+}
+body #formContainer form #loginSide #headerText {
+  font-size: 30px;
+}
+body #formContainer form #loginSide #inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin,
+body #formContainer form #loginSide #inputContainer #passwordLogin {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin h5,
+body #formContainer form #loginSide #inputContainer #passwordLogin h5 {
+  font-size: 13px;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin h5 span,
+body #formContainer form #loginSide #inputContainer #passwordLogin h5 span {
+  color: red;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin input,
+body #formContainer form #loginSide #inputContainer #passwordLogin input {
+  height: 40px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin input::-moz-placeholder, body #formContainer form #loginSide #inputContainer #passwordLogin input::-moz-placeholder {
+  font-weight: 500;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin input::placeholder,
+body #formContainer form #loginSide #inputContainer #passwordLogin input::placeholder {
+  font-weight: 500;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin #passwordLoginContainer,
+body #formContainer form #loginSide #inputContainer #passwordLogin #passwordLoginContainer {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: solid 1px gray;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin #passwordLoginContainer input,
+body #formContainer form #loginSide #inputContainer #passwordLogin #passwordLoginContainer input {
+  width: 90%;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin #passwordLoginContainer i,
+body #formContainer form #loginSide #inputContainer #passwordLogin #passwordLoginContainer i {
+  width: 30px;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #formContainer form #loginSide #inputContainer #usernameLogin input {
+  width: 100%;
+  border-radius: 2px;
+  border: solid 1px gray;
+}
+body #formContainer form #loginSide #inputContainer #otherContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+body #formContainer form #loginSide #inputContainer #otherContainer label {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 5px;
+}
+body #formContainer form #loginSide #inputContainer #otherContainer #forgotYourPassword {
+  font-size: 12px;
+  color: #3B945E;
+}
+body #formContainer form #loginSide #inputContainer #loginButton {
+  width: 100%;
+  height: 36px;
+  border-radius: 4px;
+  background-color: #3B945E;
+  color: white;
+  margin-top: 10px;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+body #formContainer form #loginSide #inputContainer #loginButton::after {
+  content: "Daxil ol";
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -36px;
+  transition: 0.3s;
+  background-color: red;
+  border-radius: 4px;
+  font-weight: 500;
+}
+body #formContainer form #loginSide #inputContainer #loginButton:hover::after {
+  bottom: 0;
+}
+body #formContainer form #loginSide #inputContainer #lines {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9f9fa0;
+  margin-top: 10px;
+  font-size: 13px;
+}
+body #formContainer form #loginSide #inputContainer #lines .line {
+  width: 30%;
+  height: 2px;
+  background-color: #E3E2EB;
+}
+body #formContainer form #loginSide #inputContainer #googleButton {
+  width: 100%;
+  height: 36px;
+  border-radius: 4px;
+  background-color: white;
+  color: white;
+  margin-top: 10px;
+  font-size: 13px;
+  position: relative;
+  border: solid 1px #9f9fa0;
+  color: black;
+  font-weight: 500;
+  gap: 10px;
+}
+body #formContainer form #loginSide #inputContainer #signUpText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+body #formContainer form #loginSide #inputContainer #signUpText a {
+  color: #3B945E;
+  text-decoration: underline;
+  font-size: 13px;
+}
+body #formContainer form #registerSide {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+body #formContainer form #registerSide #usernameRegister,
+body #formContainer form #registerSide #passwordRegister,
+body #formContainer form #registerSide #passwordRepeatRegister,
+body #formContainer form #registerSide #emailRegister {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+body #formContainer form #registerSide #usernameRegister h5,
+body #formContainer form #registerSide #passwordRegister h5,
+body #formContainer form #registerSide #passwordRepeatRegister h5,
+body #formContainer form #registerSide #emailRegister h5 {
+  font-size: 13px;
+}
+body #formContainer form #registerSide #usernameRegister h5 span,
+body #formContainer form #registerSide #passwordRegister h5 span,
+body #formContainer form #registerSide #passwordRepeatRegister h5 span,
+body #formContainer form #registerSide #emailRegister h5 span {
+  color: red;
+}
+body #formContainer form #registerSide #usernameRegister input,
+body #formContainer form #registerSide #passwordRegister input,
+body #formContainer form #registerSide #passwordRepeatRegister input,
+body #formContainer form #registerSide #emailRegister input {
+  height: 40px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+body #formContainer form #registerSide #usernameRegister input::-moz-placeholder, body #formContainer form #registerSide #passwordRegister input::-moz-placeholder, body #formContainer form #registerSide #passwordRepeatRegister input::-moz-placeholder, body #formContainer form #registerSide #emailRegister input::-moz-placeholder {
+  font-weight: 500;
+}
+body #formContainer form #registerSide #usernameRegister input::placeholder,
+body #formContainer form #registerSide #passwordRegister input::placeholder,
+body #formContainer form #registerSide #passwordRepeatRegister input::placeholder,
+body #formContainer form #registerSide #emailRegister input::placeholder {
+  font-weight: 500;
+}
+body #formContainer form #registerSide #usernameRegister #passwordRegisterContainer,
+body #formContainer form #registerSide #passwordRegister #passwordRegisterContainer,
+body #formContainer form #registerSide #passwordRepeatRegister #passwordRegisterContainer,
+body #formContainer form #registerSide #emailRegister #passwordRegisterContainer {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px gray;
+}
+body #formContainer form #registerSide #usernameRegister #passwordRegisterContainer input,
+body #formContainer form #registerSide #passwordRegister #passwordRegisterContainer input,
+body #formContainer form #registerSide #passwordRepeatRegister #passwordRegisterContainer input,
+body #formContainer form #registerSide #emailRegister #passwordRegisterContainer input {
+  width: 90%;
+}
+body #formContainer form #registerSide #usernameRegister #passwordRegisterContainer i,
+body #formContainer form #registerSide #passwordRegister #passwordRegisterContainer i,
+body #formContainer form #registerSide #passwordRepeatRegister #passwordRegisterContainer i,
+body #formContainer form #registerSide #emailRegister #passwordRegisterContainer i {
+  width: 30px;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #formContainer form #registerSide #usernameRegister input,
+body #formContainer form #registerSide #passwordRepeatRegister input,
+body #formContainer form #registerSide #emailRegister input {
+  width: 100%;
+  border-radius: 2px;
+  border: solid 1px gray;
+}
+body #formContainer form #registerSide #registerButton {
+  width: 100%;
+  height: 36px;
+  border-radius: 4px;
+  background-color: #3B945E;
+  color: white;
+  margin-top: 10px;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+body #formContainer form #registerSide #registerButton::after {
+  content: "Üzv ol";
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -36px;
+  transition: 0.3s;
+  background-color: red;
+  border-radius: 4px;
+  font-weight: 500;
+}
+body #formContainer form #registerSide #registerButton:hover::after {
+  bottom: 0;
+}
+body #formContainer form #registerSide #lines {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9f9fa0;
+  margin-top: 10px;
+  font-size: 13px;
+}
+body #formContainer form #registerSide #lines .line {
+  width: 30%;
+  height: 2px;
+  background-color: #E3E2EB;
+}
+body #formContainer form #registerSide #signInText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+body #formContainer form #registerSide #signInText a {
+  color: #3B945E;
+  text-decoration: underline;
+  font-size: 13px;
+}
+body #formContainer #image {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../images/e_commerce/ecommerce1.jpg);
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px #000, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #3B945E, 0 0 80px #3B945E, 0 0 90px #3B945E, 0 0 100px #3B945E, 0 0 150px #3B945E;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}/*# sourceMappingURL=login.css.map */

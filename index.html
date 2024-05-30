@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/mainPage/main.css">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <title>Eldlich</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a id="logoContainer" href="/index.html">
+                <p id="logo1">E</p>
+                <p id="logo2">E</p>
+            </a>
+            <div id="searchContainer">
+                <input placeholder="Search..." type="text" id="searchInput">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="navRight">
+                <div class="navRightItem" class="login">
+                    <div id="hoverLoginContainer">
+                        <button id="login">Giriş et</button>
+                        <button id="register">Üzv ol</button>
+                    </div>
+                    <i class="fa-regular fa-user"></i>Giriş et
+                </div>
+                <div class="navRightItem" id="myFavourites">
+                    <i class="fa-regular fa-heart"></i>Sevimlilərim
+                </div>
+                <div class="navRightItem" id="myBasket">
+                    <i class="fa-solid fa-cart-shopping"></i>Səbətim
+                </div>
+                <div id="hMenu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
+        <div id="headerButtons">
+            <button class="choosingButton">Qadın</button>
+            <button class="choosingButton">Kişi</button>
+            <button class="choosingButton">Ana & Uşaq</button>
+
+            <button class="choosingButton">Ev & Yaşayış</button>
+            <button class="choosingButton">Supermarket</button>
+            <button class="choosingButton">Kozmetika</button>
+
+            <button class="choosingButton">Ayaqqabı & Çanta</button>
+            <button class="choosingButton">Elektronika</button>
+            <button class="choosingButton">İdman</button>
+
+            <button class="choosingButton">Çox satanlar</button>
+            <button class="choosingButton">Flaş məhsullar</button>
+        </div>
+    </header>
+    <main>
+        <div id="products">
+        </div>
+    </main>
+    <script src="./pageFunctions/main.js"></script>
+</body>
+
+</html>
